@@ -24,7 +24,7 @@ if you want to run script follow these steps :
         cd testing-python-docx
         pip install python-docx requests colorama termcolor os
         python script.py
-        start demo.docx
+        
 
 
         
