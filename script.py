@@ -53,3 +53,20 @@ for i in data:
     dt_table[4].text = person["location"]
 
 
+
+# changeing thew page layout
+from docx.shared import Inches, Cm
+sections = doc.sections
+for section in sections:
+    section.top_margin = Cm(0.5)
+    section.bottom_margin = Cm(0.5)
+    section.left_margin = Cm(1)
+    section.right_margin = Cm(1)
+
+
+
+
+
+
+# saving the file
+doc.save('demo.docx')
