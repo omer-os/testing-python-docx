@@ -16,8 +16,8 @@ using :
 
 
 if you want to run script follow these steps : 
-    1- install python from https://www.python.org/downloads/
-    2- run these commands in your termminal :
+1- install python from https://www.python.org/downloads/
+2- run these commands in your termminal :
     
 
         git clone https://github.com/omer-os/testing-python-docx.git
