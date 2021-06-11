@@ -3,7 +3,7 @@ from docx import Document
 import requests
 
 
-# createing a .docx file
+# creating a .docx file
 doc = Document()
 
 
@@ -11,9 +11,10 @@ doc = Document()
 students_number = int(input('students number : '))
 
 
-# createing the table
+# creating the table
 table = doc.add_table(rows=students_number+1,cols=5)
-# styleing the table
+
+# styling the table
 table.style = 'Table Grid'
 
 th_table = table.rows[0].cells
@@ -54,7 +55,7 @@ for i in data:
 
 
 
-# changeing thew page layout
+# changing thew page layout
 from docx.shared import Inches, Cm
 sections = doc.sections
 for section in sections:
