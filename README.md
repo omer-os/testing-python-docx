@@ -2,9 +2,13 @@
 ## testing my python skills 
 
 using : 
+    
     1- python programming language
+    
     2- python-docx library (to convert data into word file)
+    
     3- python requests library (to fetch data from api)
+    
     4- fetching random data from https://randomuser.me/ api
 
  you can get to 5000 random data from this api 
