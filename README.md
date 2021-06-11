@@ -7,8 +7,9 @@ using :
     3- python requests library (to fetch data from api)
     4- fetching random data from https://randomuser.me/ api
 
-// you can get to 5000 random data from this api 
-// the script will fetch all the data and convert it into demo.docx (word) file as a table
+ you can get to 5000 random data from this api 
+ the script will fetch all the data and convert it into demo.docx (word) file as a table
+
 
 if you want to run script follow these steps : 
     1- install python from https://www.python.org/downloads/
@@ -17,10 +18,11 @@ if you want to run script follow these steps :
 
         git clone https://github.com/omer-os/testing-python-docx.git
         cd testing-python-docx
-        pip install python-docx requests
+        pip install python-docx requests colorama termcolor os
         python script.py
         start demo.docx
 
+
         
-        
+IF YOU HAD AN ISSUE WITH THE CODE PLEASE LET ME KNOW ON [this link](https://github.com/omer-os/testing-python-docx/issues/new)
 THANK YOU FOR VISITING 
