@@ -8,7 +8,7 @@ doc = Document()
 
 
 # input how many students do you want to get
-students_number = int(input('students number : '))
+students_number = int(input('how many students do you want to get ?'))
 
 
 # creating the table
