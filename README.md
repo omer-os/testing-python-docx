@@ -17,7 +17,7 @@ if you want to run script follow these steps :
 
         git clone https://github.com/omer-os/testing-python-docx.git
         cd testing-python-docx
-        pip install requirements.txt
+        pip install python-docx , requests
         python script.py
 
         
