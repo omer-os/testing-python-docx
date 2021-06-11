@@ -1,5 +1,5 @@
 # python automate word file 
-# testing my python skills 
+## testing my python skills 
 
 using : 
     1- python programming language
@@ -12,12 +12,14 @@ using :
 
 if you want to run script follow these steps : 
     1- install python from https://www.python.org/downloads/
-    2- run these commands in your termminal : 
+    2- run these commands in your termminal :
     
-        git clone https://github.com/omer-os/testing-python-docx.git .
+        ```
+        git clone https://github.com/omer-os/testing-python-docx.git
         cd testing-python-docx
-        npm install requirements.txt
+        pip install requirements.txt
         python script.py
+        ```
         
         
 THANK YOU FOR VISITING 
