@@ -1,4 +1,4 @@
-import React , {useEffect, useState} from 'react'
+import React , {useState} from 'react'
 import {db} from './firebase.jsx'
 import './app.css'
 
@@ -13,27 +13,12 @@ export default function App() {
 
 
 
-  const [studentDetails, setstudentDetails] = useState([])
-    useEffect(()=>{
-      const students = []
-        db.collection('data').get()
-            .then(snapshot => {
-                snapshot.docs.forEach(student => {
-                  let currentID = student.id
-                  let appObj = { ...student.data(), ['id']: currentID }
-                  students.push(appObj)
-                  
-                    students.push(student.data())
-                  })
-                  setstudentDetails(students)
-                })
-                console.log(studentDetails)
-              },[])
+  
 
         
               
       const sendData = ()=>{
-          if (!(Name == '') && !(Gender == '') && !(Age == '') && !(City == '') && !(Email == '') && !(Phone == '')){
+          if (!(Name === '') && !(Gender === '') && !(Age === '') && !(City === '') && !(Email === '') && !(Phone === '')){
             db.collection('data').add({
               'name': Name,
               'age':Age,
@@ -61,12 +46,12 @@ export default function App() {
             
             
             <fieldset>
-              <input placeholder="الاسم" onChange={(e)=>{setName(e.target.value)}} type="text" tabIndex="1" required autoFocus/>
+              <input placeholder="الاسم" maxLength='20' onChange={(e)=>{setName(e.target.value)}} type="text" tabIndex="1" required autoFocus/>
             </fieldset>
 
 
             <fieldset>
-              <input placeholder="العمر" onChange={(e)=>{setAge(e.target.value)}} type="text" tabIndex="1" required autoFocus/>
+              <input placeholder="العمر" maxLength='2' onChange={(e)=>{setAge(e.target.value)}} type="text" tabIndex="1" required autoFocus/>
             </fieldset>
 
             
@@ -90,12 +75,12 @@ export default function App() {
 
 
             <fieldset>
-              <input placeholder="الايميل الجامعي" onChange={(e)=>{setEmail(e.target.value)}} type="text" tabIndex="2" required/>
+              <input placeholder="الايميل الجامعي" maxLength='25' onChange={(e)=>{setEmail(e.target.value)}} type="text" tabIndex="2" required/>
             </fieldset>
 
 
             <fieldset>
-              <input placeholder="رقم الهاتف" onChange={(e)=>{setPhone(e.target.value)}} type="tel" tabIndex="3" required/>
+              <input placeholder="رقم الهاتف" maxLength='11' onChange={(e)=>{setPhone(e.target.value)}} type="tel" tabIndex="3" required/>
             </fieldset>
             <fieldset>
               <input placeholder="من اي محافضة" onChange={(e)=>{setCity(e.target.value)}} type="text" tabIndex="4" required/>
@@ -105,7 +90,7 @@ export default function App() {
               <button name="submit" type="button" id="contact-submit" onClick={sendData}>الارسال</button>
             </fieldset>
             <p className="copyright">by omar chatin</p>
-            <p className="copyright">source code on <a href="https://github.com/omer-os/testing-python-docx" target="_blank" title="Colorlib">my github</a></p>
+            <p className="copyright">source code on <a href="https://github.com/omer-os/testing-python-docx" rel="noopener noreferrer"  title="Colorlib">my github</a></p>
           </form>
       </div>
   )
