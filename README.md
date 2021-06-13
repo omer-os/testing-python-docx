@@ -13,20 +13,6 @@ using :
 
  you can get to 5000 random data from this api 
  the script will fetch all the data and convert it into demo.docx (word) file as a table
-
-
-if you want to run script follow these steps : 
-1- install python from https://www.python.org/downloads/
-2- run these commands in your termminal :
-    
-
-        git clone https://github.com/omer-os/testing-python-docx.git
-        cd testing-python-docx
-        pip install python-docx requests colorama termcolor os
-        python script.py
-        
-
-
         
 IF YOU HAD AN ISSUE WITH THE CODE PLEASE LET ME KNOW ON [this link](https://github.com/omer-os/testing-python-docx/issues/new)
 THANK YOU FOR VISITING 
