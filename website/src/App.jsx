@@ -29,16 +29,24 @@ export default function App() {
                 })
                 console.log(studentDetails)
               },[])
+
+        
               
       const sendData = ()=>{
-          db.collection('data').add({
-          'name': Name,
-          'age':Age,
-          'gender':Gender,
-          'State':City,
-          'email':Email,
-          'phone':Phone
-        })
+          if (!(Name == '') && !(Gender == '') && !(Age == '') && !(City == '') && !(Email == '') && !(Phone == '')){
+            db.collection('data').add({
+              'name': Name,
+              'age':Age,
+              'gender':Gender,
+              'State':City,
+              'email':Email,
+              'phone':Phone
+            })
+            alert('! تم الارسال بنجاح ')
+          }
+          else{
+            alert('. رجاءا ادخل المعلومات بشكل صحيح ثم اضغط لزر الارسال ')            
+          }
       }
 
 
@@ -53,12 +61,12 @@ export default function App() {
             
             
             <fieldset>
-              <input placeholder="الاسم" onChange={(e)=>{setName(e.target.value)}} type="text" tabindex="1" required autofocus/>
+              <input placeholder="الاسم" onChange={(e)=>{setName(e.target.value)}} type="text" tabIndex="1" required autoFocus/>
             </fieldset>
 
 
             <fieldset>
-              <input placeholder="العمر" onChange={(e)=>{setAge(e.target.value)}} type="text" tabindex="1" required autofocus/>
+              <input placeholder="العمر" onChange={(e)=>{setAge(e.target.value)}} type="text" tabIndex="1" required autoFocus/>
             </fieldset>
 
             
@@ -82,22 +90,22 @@ export default function App() {
 
 
             <fieldset>
-              <input placeholder="الايميل الجامعي" onChange={(e)=>{setEmail(e.target.value)}} type="text" tabindex="2" required/>
+              <input placeholder="الايميل الجامعي" onChange={(e)=>{setEmail(e.target.value)}} type="text" tabIndex="2" required/>
             </fieldset>
 
 
             <fieldset>
-              <input placeholder="رقم الهاتف" onChange={(e)=>{setPhone(e.target.value)}} type="tel" tabindex="3" required/>
+              <input placeholder="رقم الهاتف" onChange={(e)=>{setPhone(e.target.value)}} type="tel" tabIndex="3" required/>
             </fieldset>
             <fieldset>
-              <input placeholder="من اي محافضة" onChange={(e)=>{setCity(e.target.value)}} type="text" tabindex="4" required/>
+              <input placeholder="من اي محافضة" onChange={(e)=>{setCity(e.target.value)}} type="text" tabIndex="4" required/>
             </fieldset>
 
             <fieldset>
-              <button name="submit" type="submit" id="contact-submit" onClick={sendData}>الارسال</button>
+              <button name="submit" type="button" id="contact-submit" onClick={sendData}>الارسال</button>
             </fieldset>
             <p className="copyright">by omar chatin</p>
-            <p className="copyright">source code on <a href="" target="_blank" title="Colorlib">my github</a></p>
+            <p className="copyright">source code on <a href="https://github.com/omer-os/testing-python-docx" target="_blank" title="Colorlib">my github</a></p>
           </form>
       </div>
   )
