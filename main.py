@@ -34,15 +34,16 @@ sections = word.sections            #/////
 for section in sections:            #/////
     section.top_margin = Cm(0.5)    #/////
     section.bottom_margin = Cm(0.5) #/////
-    section.left_margin = Cm(1)     #/////
-    section.right_margin = Cm(1)    #/////
+    section.left_margin = Cm(0.5)   #/////
+    section.right_margin = Cm(0.5)  #/////
                                     #/////
 #/////////////////////////////////////////
 #/////////////////////////////////////////
-
+count = 0
+err=False 
 
 os.system('cls||clear')
-print(colored('\n--------------------\ automate MS word with python /--------------------', 'red'))
+print(colored('\n---------------------\ automate MS word with python /--------------------', 'red'))
 print(colored('----------------------------\ by omar chatin /----------------------------\n\n', 'red'))
 
 
@@ -69,15 +70,25 @@ if rqst=='db':
         a[2].text = person['email']
         a[3].text = person['phone']
         a[4].text = person['State']
+        count+=1
+        print(colored(f'person -{count}- : \n','yellow'))
+        print(person)
+
 
 
 
 
 
 # getting data from random user api
-if rqst=='rdm':
+elif rqst=='rdm':
 
-    num = int(input(colored('how many people do you want to get ? : ','green')))
+    try:
+        num = int(input(colored('how many people do you want to get ? : ','green')))
+    except:
+        print(colored('error occured , make sure you filled the inputs correctly .','red'))
+        time.sleep(3)
+        exit()
+
     print(colored('\nfetching data from randomuser API...', 'red'))
     time.sleep(4)
     data = requests.get(f'https://randomuser.me/api/?results={num}')
@@ -97,6 +108,17 @@ if rqst=='rdm':
         a[2].text = person['email']
         a[3].text = person['phone']
         a[4].text = person['location']
+
+        count+=1
+        print(colored(f'person -{count}- : \n','yellow'))
+        print(person)
+
+
+
+else:
+    time.sleep(3)
+    print(colored('\nerror occured , make sure you filled the inputs correctly .','red'))
+    exit()
 
 
 
